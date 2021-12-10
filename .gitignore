@@ -1,0 +1,54 @@
+/bin
+/.cache
+/.project
+src/main/webapp/resources/app
+
+data
+target
+output
+*.jar
+*.war
+*.ear
+*.class
+*.swp
+*.tmp
+*.bak
+*~
+nohup.out
+docs
+
+# Eclipse specific                  
+.project
+.metadata
+.classpath
+.settings
+.loadpath
+local.properties
+*.swp
+*.launch
+.checkstyle
+.springBeans
+
+
+# Idea specific
+*.iml
+*.ipr
+*.iws
+.idea
+
+# Netbeans specific
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+/target/
+
+# NodeJs specific
+node_modules
+npm-debug.log
+*.log
+*.tlog
+tx-logs
