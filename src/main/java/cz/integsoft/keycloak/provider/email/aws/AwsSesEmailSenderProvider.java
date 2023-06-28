@@ -22,6 +22,7 @@ import software.amazon.awssdk.services.ses.model.SendEmailRequest;
  * Provider for sending emails via AWS SES.
  *
  * @author Niko Köbler, https://www.n-k.de, @dasniko
+ * @author Integsoft
  */
 public class AwsSesEmailSenderProvider implements EmailSenderProvider {
 
@@ -33,7 +34,11 @@ public class AwsSesEmailSenderProvider implements EmailSenderProvider {
 
 	@Override
 	public void send(final Map<String, String> config, final UserModel user, final String subject, final String textBody, final String htmlBody) throws EmailException {
+		send(config, user.getEmail(), subject, textBody, htmlBody);
+	}
 
+	@Override
+	public void send(final Map<String, String> config, final String address, final String subject, final String textBody, final String htmlBody) throws EmailException {
 		final String from = config.get("from");
 		final String fromDisplayName = config.get("fromDisplayName");
 		final String replyTo = config.get("replyTo");
@@ -44,7 +49,7 @@ public class AwsSesEmailSenderProvider implements EmailSenderProvider {
 				throw new Exception("Missing 'from' email address.");
 			}
 
-			final SendEmailRequest.Builder sendEmailRequest = SendEmailRequest.builder().destination(Destination.builder().toAddresses(user.getEmail()).build())
+			final SendEmailRequest.Builder sendEmailRequest = SendEmailRequest.builder().destination(Destination.builder().toAddresses(address).build())
 					.message(Message.builder().subject(Content.builder().charset(StandardCharsets.UTF_8.toString()).data(subject).build())
 							.body(Body.builder().html(Content.builder().charset(StandardCharsets.UTF_8.toString()).data(htmlBody).build()).text(Content.builder().charset(StandardCharsets.UTF_8.toString()).data(textBody).build()).build())
 							.build())

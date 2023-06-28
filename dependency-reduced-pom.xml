@@ -4,7 +4,7 @@
   <groupId>cz.integsoft.keycloak</groupId>
   <artifactId>mbta-keycloak-aws-ses-email-provider</artifactId>
   <name>MBTA Keycloak AWS email provider</name>
-  <version>1.0.0</version>
+  <version>1.1.0</version>
   <description>Keycloak SSO provider for sending emails via AWS SES</description>
   <build>
     <resources>
@@ -80,19 +80,19 @@
     <dependency>
       <groupId>org.keycloak</groupId>
       <artifactId>keycloak-server-spi-private</artifactId>
-      <version>15.0.2</version>
+      <version>19.0.3</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.keycloak</groupId>
       <artifactId>keycloak-server-spi</artifactId>
-      <version>15.0.2</version>
+      <version>19.0.3</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.keycloak</groupId>
       <artifactId>keycloak-services</artifactId>
-      <version>15.0.2</version>
+      <version>19.0.3</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -148,16 +148,16 @@
     </dependencies>
   </dependencyManagement>
   <properties>
-    <maven-shade.version>3.2.4</maven-shade.version>
-    <maven-surefire.version>2.22.2</maven-surefire.version>
-    <junit.version>5.7.0</junit.version>
-    <java.version>1.8</java.version>
-    <keycloak.version>15.0.2</keycloak.version>
-    <aws.version>2.17.98</aws.version>
     <maven.compiler.target>${java.version}</maven.compiler.target>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <mockito.version>2.25.1</mockito.version>
+    <aws.version>2.17.98</aws.version>
+    <java.version>11</java.version>
+    <keycloak.version>19.0.3</keycloak.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <junit.version>5.7.0</junit.version>
+    <mockito.version>2.25.1</mockito.version>
+    <maven-shade.version>3.2.4</maven-shade.version>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <maven-surefire.version>2.22.2</maven-surefire.version>
   </properties>
 </project>
