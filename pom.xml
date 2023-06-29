@@ -2,13 +2,13 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>cz.integsoft.keycloak</groupId>
   <artifactId>mbta-keycloak-aws-ses-email-provider</artifactId>
-  <version>1.0.0</version>
+  <version>1.1.0</version>
   <name>MBTA Keycloak AWS email provider</name>
   <description>Keycloak SSO provider for sending emails via AWS SES</description>
   
 	<properties>
-        <java.version>1.8</java.version>
-		<keycloak.version>15.0.2</keycloak.version>
+        <java.version>11</java.version>
+		<keycloak.version>19.0.3</keycloak.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <aws.version>2.17.98</aws.version>
