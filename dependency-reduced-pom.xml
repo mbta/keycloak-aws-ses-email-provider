@@ -4,7 +4,7 @@
   <groupId>cz.integsoft.keycloak</groupId>
   <artifactId>mbta-keycloak-aws-ses-email-provider</artifactId>
   <name>MBTA Keycloak AWS email provider</name>
-  <version>1.2.3</version>
+  <version>1.2.4</version>
   <description>Keycloak SSO provider for sending emails via AWS SES</description>
   <build>
     <resources>
@@ -80,19 +80,19 @@
     <dependency>
       <groupId>org.keycloak</groupId>
       <artifactId>keycloak-server-spi-private</artifactId>
-      <version>24.0.5</version>
+      <version>25.0.2</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.keycloak</groupId>
       <artifactId>keycloak-server-spi</artifactId>
-      <version>24.0.5</version>
+      <version>25.0.2</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.keycloak</groupId>
       <artifactId>keycloak-services</artifactId>
-      <version>24.0.5</version>
+      <version>25.0.2</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -122,10 +122,6 @@
       <scope>test</scope>
       <exclusions>
         <exclusion>
-          <artifactId>byte-buddy</artifactId>
-          <groupId>net.bytebuddy</groupId>
-        </exclusion>
-        <exclusion>
           <artifactId>byte-buddy-agent</artifactId>
           <groupId>net.bytebuddy</groupId>
         </exclusion>
@@ -151,7 +147,7 @@
     <maven.compiler.target>${java.version}</maven.compiler.target>
     <aws.version>2.17.98</aws.version>
     <java.version>17</java.version>
-    <keycloak.version>24.0.5</keycloak.version>
+    <keycloak.version>25.0.2</keycloak.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <junit.version>5.7.0</junit.version>
